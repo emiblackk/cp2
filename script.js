@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function(){
   event.preventDefault();
 
-  const url = "https://api.aakhilv.me/facts/json";
+  const url = "https://meowfacts.herokuapp.com/";
   fetch(url)
     .then(function(response) {
       return response.json();
@@ -9,8 +9,7 @@ document.addEventListener("DOMContentLoaded", function(){
       let results = "";
       console.log(json)
 
-      results += "<p>";
-      results += "<img src=" + json.dark + "></p>";
+      results += "<p>" + json.data[0]+ "</p>";
 
 
 
@@ -23,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function(){
 document.getElementById("randomFactButton").addEventListener("click", function(event) {
   event.preventDefault();
 
-  const url = "https://api.aakhilv.me/facts/json";
+  const url = "https://meowfacts.herokuapp.com/";
   fetch(url)
     .then(function(response) {
       return response.json();
@@ -31,8 +30,8 @@ document.getElementById("randomFactButton").addEventListener("click", function(e
       let results = "";
       console.log(json)
 
-      results += "<p>";
-      results += "<img src=" + json.dark + "></p>";
+      results += "<p>" + json.data[0]+ "</p>";
+
 
 
 
